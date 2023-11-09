@@ -1,39 +1,39 @@
-import { useState } from "react";
-import "./App.css";
-import ClientInfo from "./Components/ClientInfo";
-import CompanyInfo from "./Components/CompanyInfo";
-import Header from "./Components/Header";
-import PDFGenerator from "./Components/PDFGenerator";
-import ProductInfo from "./Components/ProductInfo";
+import { useState } from 'react';
+import './App.css';
+import ClientInfo from './Components/ClientInfo';
+import CompanyInfo from './Components/CompanyInfo';
+import Header from './Components/Header';
+import ProductInfo from './Components/ProductInfo';
+import PDFGenerator from './Components/PDFGenerator';
 
 function App() {
   const [companyData, setCompanyData] = useState({
-    logo: "",
-    name: "",
-    address: "",
-    cnpj: "",
+    logo: '',
+    name: '',
+    address: '',
+    cnpj: '',
   });
 
   const [clientData, setClientData] = useState({
-    name: "",
-    cpf: "",
-    phone: "",
-    address: "",
+    name: '',
+    cpf: '',
+    phone: '',
+    address: '',
   });
 
   const [products, setProducts] = useState<
     Array<{
       product: string;
-      price: string;
-      quantity: string;
-      total: string;
+      price: number;
+      quantity: number;
+      total: number;
     }>
   >([
     {
-      product: "",
-      price: "",
-      quantity: "",
-      total: "",
+      product: '',
+      price: 0,
+      quantity: 0,
+      total: 0,
     },
   ]);
 
@@ -41,22 +41,12 @@ function App() {
     setProducts([
       ...products,
       {
-        product: "",
-        price: "",
-        quantity: "",
-        total: "",
+        product: '',
+        price: 0,
+        quantity: 0,
+        total: 0,
       },
     ]);
-  };
-
-  const generatePDF = () => {
-    const dataForPDF = {
-      companyData,
-      clientData,
-      productsData: products,
-    };
-
-    console.log(dataForPDF);
   };
 
   return (
