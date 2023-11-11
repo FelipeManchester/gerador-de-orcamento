@@ -39,28 +39,47 @@ const ProductInfo: React.FC<ProductInfoProps> = ({
   };
 
   return (
-    <div>
+    <div className='max-w-md mx-auto p-6 bg-white rounded-md shadow-md'>
       <form>
-        <label>Produto:</label>
-        <input
-          type='text'
-          value={productData.product}
-          onChange={handleProductChange}
-        />
-        <label>Preço:</label>
-        <input
-          type='text'
-          value={productData.price}
-          onChange={handlePriceChange}
-        />
-        <label>Quantidade:</label>
-        <input
-          type='number'
-          value={productData.quantity}
-          onChange={handleQuantityChange}
-        />
-        <label>Total:</label>
-        <input type='number' value={calculateTotal()} disabled />
+        <div className='mb-4'>
+          <label className='block text-gray-600 mb-2'>Produto:</label>
+          <input
+            type='text'
+            className='border w-full py-2 px-3'
+            value={productData.product}
+            onChange={handleProductChange}
+          />
+        </div>
+
+        <div className='mb-4'>
+          <label className='block text-gray-600 mb-2'>Preço:</label>
+          <input
+            type='text'
+            className='border w-full py-2 px-3'
+            value={productData.price}
+            onChange={handlePriceChange}
+          />
+        </div>
+
+        <div className='mb-4'>
+          <label className='block text-gray-600 mb-2'>Quantidade:</label>
+          <input
+            type='number'
+            className='border w-full py-2 px-3'
+            value={productData.quantity}
+            onChange={handleQuantityChange}
+          />
+        </div>
+
+        <div className='mb-4'>
+          <label className='block text-gray-600 mb-2'>Total:</label>
+          <input
+            type='number'
+            className='border w-full py-2 px-3'
+            value={calculateTotal()}
+            disabled
+          />
+        </div>
       </form>
     </div>
   );

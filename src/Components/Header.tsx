@@ -1,8 +1,8 @@
 const Header = () => {
   return (
-    <header>
-      <h1 className='underline'>Gerador de Orçamento</h1>
-      <p className='underline text-gray-100'>
+    <header className='bg-blue-500 text-white p-8 text-center'>
+      <h1 className='text-4xl font-bold mb-4'>Gerador de Orçamento</h1>
+      <p className='text-lg'>
         Preencha as informações necessárias e clique em gerar.
       </p>
     </header>

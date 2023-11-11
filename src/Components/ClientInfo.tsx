@@ -37,32 +37,44 @@ const ClientInfo = ({
   };
 
   return (
-    <form>
-      <h2>Dados do Cliente</h2>
-      <div>
-        <label>Nome:</label>
+    <form className='max-w-md mx-auto p-6 bg-white rounded-md shadow-md'>
+      <h2 className='text-2xl font-semibold mb-4'>Dados do Cliente</h2>
+
+      <div className='mb-4'>
+        <label className='block text-gray-600 mb-2'>Nome:</label>
         <input
           type='text'
+          className='border w-full py-2 px-3'
           value={clientData.name}
           onChange={handleNameChange}
         />
       </div>
-      <div>
-        <label>CPF:</label>
-        <input type='text' value={clientData.cpf} onChange={handleCpfChange} />
-      </div>
-      <div>
-        <label>Telefone:</label>
+
+      <div className='mb-4'>
+        <label className='block text-gray-600 mb-2'>CPF:</label>
         <input
           type='text'
+          className='border w-full py-2 px-3'
+          value={clientData.cpf}
+          onChange={handleCpfChange}
+        />
+      </div>
+
+      <div className='mb-4'>
+        <label className='block text-gray-600 mb-2'>Telefone:</label>
+        <input
+          type='text'
+          className='border w-full py-2 px-3'
           value={clientData.phone}
           onChange={handlePhoneChange}
         />
       </div>
-      <div>
-        <label>Endereço:</label>
+
+      <div className='mb-4'>
+        <label className='block text-gray-600 mb-2'>Endereço:</label>
         <input
           type='text'
+          className='border w-full py-2 px-3'
           value={clientData.address}
           onChange={handleAddressChange}
         />
