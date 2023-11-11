@@ -24,14 +24,14 @@ function App() {
   const [products, setProducts] = useState<
     Array<{
       product: string;
-      price: number;
+      price: string;
       quantity: number;
       total: number;
     }>
   >([
     {
       product: '',
-      price: 0,
+      price: '',
       quantity: 0,
       total: 0,
     },
@@ -42,7 +42,7 @@ function App() {
       ...products,
       {
         product: '',
-        price: 0,
+        price: '',
         quantity: 0,
         total: 0,
       },

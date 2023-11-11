@@ -3,7 +3,7 @@ import React from 'react';
 type ProductInfoProps = {
   productData: {
     product: string;
-    price: number;
+    price: string;
     quantity: number;
     total: number;
   };
@@ -20,7 +20,9 @@ const ProductInfo: React.FC<ProductInfoProps> = ({
   };
 
   const handlePriceChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const newData = { ...productData, price: event.target.value };
+    const inputValue = event.target.value;
+    const numericValue = inputValue.replace(/[^0-9.,]/g, ''); // Remove non-numeric characters except dot and comma
+    const newData = { ...productData, price: numericValue };
     onProductDataChange(newData);
   };
 
@@ -30,7 +32,9 @@ const ProductInfo: React.FC<ProductInfoProps> = ({
   };
 
   const calculateTotal = () => {
-    productData.total = productData.price * productData.quantity;
+    const price = parseFloat(productData.price.replace(',', '.'));
+
+    productData.total = price * productData.quantity;
     return productData.total;
   };
 
@@ -45,7 +49,7 @@ const ProductInfo: React.FC<ProductInfoProps> = ({
         />
         <label>Preço:</label>
         <input
-          type='number'
+          type='text'
           value={productData.price}
           onChange={handlePriceChange}
         />

@@ -39,14 +39,14 @@ const CompanyInfo = ({
   return (
     <form>
       <h2>Dados da Empresa</h2>
-      <div>
+      {/* <div>
         <label>Logo:</label>
         <input
           type='file'
           value={companyData.logo}
           onChange={handleLogoChange}
         />
-      </div>
+      </div> */}
       <div>
         <label>Nome:</label>
         <input

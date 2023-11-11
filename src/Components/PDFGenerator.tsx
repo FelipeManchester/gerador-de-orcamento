@@ -1,5 +1,13 @@
-import { Document, Page, Text, View, PDFViewer } from '@react-pdf/renderer';
+import {
+  Document,
+  Page,
+  Text,
+  View,
+  PDFViewer,
+  Image,
+} from '@react-pdf/renderer';
 import { useRef } from 'react';
+import logo from '../assets/drogaria.jpg';
 
 type PDFGeneratorProps = {
   companyData: CompanyData;
@@ -22,7 +30,7 @@ type ClientData = {
 
 type ProductsData = {
   product: string;
-  price: number;
+  price: string;
   quantity: number;
   total: number;
 };
@@ -35,10 +43,11 @@ const PDFGenerator: React.FC<PDFGeneratorProps> = ({
   const PDFViewerRef = useRef(null);
   const generatePDF = () => {
     return (
-      <PDFViewer width={500} height={500} ref={PDFViewerRef}>
+      <PDFViewer width={800} height={500} ref={PDFViewerRef}>
         <Document>
           <Page>
             <View>
+              <Image src={logo} />
               <Text>Empresa:{companyData.name}</Text>
               <Text>Endereço:{companyData.address}</Text>
               <Text>CNPJ:{companyData.cnpj}</Text>
@@ -49,9 +58,9 @@ const PDFGenerator: React.FC<PDFGeneratorProps> = ({
               {productsData.map((product, index) => (
                 <View key={index}>
                   <Text>Produto: {product.product}</Text>
-                  <Text>Preço: {product.price}</Text>
+                  <Text>Preço: R$ {product.price}</Text>
                   <Text>Quantidade: {product.quantity}</Text>
-                  <Text>Valor Total: {product.total}</Text>
+                  <Text>Valor Total: R$ {product.total}</Text>
                 </View>
               ))}
             </View>
