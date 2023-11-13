@@ -43,9 +43,9 @@ const ProductInfo: React.FC<ProductInfoProps> = ({
   };
 
   return (
-    <div className='max-w-md mx-auto p-6 bg-white rounded-md shadow-md'>
+    <div className='w-auto p-6 bg-white rounded-md shadow-md'>
       <form className='flex flex-wrap'>
-        <div className='w-full mb-4'>
+        <div className='w-1/2 mb-4'>
           <label className='block text-gray-600 mb-2'>Produto:</label>
           <input
             type='text'
@@ -54,7 +54,7 @@ const ProductInfo: React.FC<ProductInfoProps> = ({
             onChange={handleProductChange}
           />
         </div>
-        <div className='w-1/2 pr-2 mb-4'>
+        <div className='w-1/8 pr-2 mb-4'>
           <label className='block text-gray-600 mb-2'>Preço:</label>
           <input
             type='text'
@@ -63,7 +63,7 @@ const ProductInfo: React.FC<ProductInfoProps> = ({
             onChange={handlePriceChange}
           />
         </div>
-        <div className='w-1/4 mb-4'>
+        <div className='w-1/8 mb-4'>
           <label className='block text-gray-600 mb-2'>Quantidade:</label>
           <input
             type='number'
@@ -72,7 +72,7 @@ const ProductInfo: React.FC<ProductInfoProps> = ({
             onChange={handleQuantityChange}
           />
         </div>
-        <div className='w-full mb-4'>
+        <div className='w-1/8 mb-4'>
           <label className='block text-gray-600 mb-2'>Total:</label>
           <input
             type='number'

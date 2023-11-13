@@ -56,7 +56,7 @@ const Main = () => {
   };
 
   return (
-    <main>
+    <main className='flex flex-wrap'>
       <CompanyInfo onCompanyDataChange={(data) => setCompanyData(data)} />
       <ClientInfo onClientDataChange={(data) => setClientData(data)} />
       {products.map((productData, index) => (

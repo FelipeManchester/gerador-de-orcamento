@@ -37,7 +37,7 @@ const CompanyInfo = ({
   };
 
   return (
-    <form className='max-w-md p-6 bg-white rounded-md shadow-md'>
+    <form className='w-1/2 p-6 bg-white rounded-md shadow-md'>
       <h2 className='text-2xl font-semibold mb-4'>Dados da Empresa</h2>
       {/* <div>
         <label>Logo:</label>
