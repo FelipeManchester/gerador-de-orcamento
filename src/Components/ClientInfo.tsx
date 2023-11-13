@@ -37,10 +37,10 @@ const ClientInfo = ({
   };
 
   return (
-    <form className='max-w-md mx-auto p-6 bg-white rounded-md shadow-md'>
-      <h2 className='text-2xl font-semibold mb-4'>Dados do Cliente</h2>
+    <form className='max-w-md p-6 bg-white rounded-md shadow-md flex flex-wrap'>
+      <h2 className='text-2xl font-semibold mb-4 w-full'>Dados do Cliente</h2>
 
-      <div className='mb-4'>
+      <div className='w-full pr-2 mb-4'>
         <label className='block text-gray-600 mb-2'>Nome:</label>
         <input
           type='text'
@@ -50,7 +50,7 @@ const ClientInfo = ({
         />
       </div>
 
-      <div className='mb-4'>
+      <div className='w-1/2 pr-2 mb-4'>
         <label className='block text-gray-600 mb-2'>CPF:</label>
         <input
           type='text'
@@ -60,7 +60,7 @@ const ClientInfo = ({
         />
       </div>
 
-      <div className='mb-4'>
+      <div className='w-1/2 pr-2 mb-4'>
         <label className='block text-gray-600 mb-2'>Telefone:</label>
         <input
           type='text'
@@ -70,7 +70,7 @@ const ClientInfo = ({
         />
       </div>
 
-      <div className='mb-4'>
+      <div className='w-full mb-4'>
         <label className='block text-gray-600 mb-2'>Endereço:</label>
         <input
           type='text'

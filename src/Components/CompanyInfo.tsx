@@ -12,11 +12,11 @@ const CompanyInfo = ({
     cnpj: '',
   });
 
-  const handleLogoChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  /* const handleLogoChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const newData = { ...companyData, logo: e.target.value };
     setCompanyData(newData);
     onCompanyDataChange(newData);
-  };
+  };*/
 
   const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const newData = { ...companyData, name: e.target.value };
@@ -37,7 +37,7 @@ const CompanyInfo = ({
   };
 
   return (
-    <form className='max-w-md mx-auto p-6 bg-white rounded-md shadow-md'>
+    <form className='max-w-md p-6 bg-white rounded-md shadow-md'>
       <h2 className='text-2xl font-semibold mb-4'>Dados da Empresa</h2>
       {/* <div>
         <label>Logo:</label>

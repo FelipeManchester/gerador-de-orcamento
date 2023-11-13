@@ -47,6 +47,14 @@ const Main = () => {
     ]);
   };
 
+  const removeProduct = (index: number) => {
+    if (products.length > 1) {
+      const updatedProducts = [...products];
+      updatedProducts.splice(index, 1);
+      setProducts(updatedProducts);
+    }
+  };
+
   return (
     <main>
       <CompanyInfo onCompanyDataChange={(data) => setCompanyData(data)} />
@@ -60,6 +68,8 @@ const Main = () => {
             updatedProducts[index] = data;
             setProducts(updatedProducts);
           }}
+          onAddProduct={() => addProduct()}
+          onRemoveProduct={() => removeProduct(index)}
         />
       ))}
       <PDFGenerator
@@ -67,7 +77,6 @@ const Main = () => {
         clientData={clientData}
         productsData={products}
       />
-      <button onClick={addProduct}>Adicionar produto</button>
     </main>
   );
 };
