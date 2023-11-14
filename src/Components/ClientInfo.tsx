@@ -37,7 +37,7 @@ const ClientInfo = ({
   };
 
   return (
-    <form className='w-1/2 p-6 bg-white rounded-md shadow-md flex flex-wrap'>
+    <form className='w-5/12 mx-6 p-6 bg-white rounded-md shadow-md flex flex-wrap'>
       <h2 className='text-2xl font-semibold mb-4 w-full'>Dados do Cliente</h2>
 
       <div className='w-full pr-2 mb-4'>
